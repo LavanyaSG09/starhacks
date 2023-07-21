@@ -5,11 +5,164 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOD</title>
-    <link rel="stylesheet" href="style.css"
+    <style>
+        body{
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+ 
+}
+  .logo{
+    margin: 0px 10px 0px 0px;
+    float: left;
+  }
+.img1{
+  margin: 0;
+}
+
+  header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:65px;
+    background-color: black;
+    font-family: sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.menu > li {
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+}
+li span {
+    height: 50px;
+    width: 100%;
+  
+    display: block;
+    background-color: black;
+    position: relative;
+    z-index: 100;
+    cursor:pointer;
+    padding-top: 10px;
+}
+ul.menu > li > a {
+    color: white;
+}
+li > ul {
+    background-color: black;
+    color: white;
+    font-size: small;
+    text-align: left;
+    -webkit-transform:translateY(-200%);
+    -moz-transform:translateY(-200%);
+    transform:translateY(-100%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  
+}
+li > ul > li {
+    border: 1px solid black;
+    background-color: black;
+    border-top: none;
+    padding: 0 20px;   
+   
+}
+
+li:hover ul {
+    opacity: 1;
+    background-color: #a60414;
+    -webkit-transform:translateY(0px);
+    -moz-transform:translateY(0px);
+    transform:translateY(0px) -webkit-transition all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+   
+}
+
+li>ul>li:hover {
+  background-color: #a60414;
+}
+.f1 {
+    margin-top: 100px;
+}
+
+.abbform {
+    margin: 10px 20px;
+    padding: 10px;
+    width: 800px;
+    
+}
+.button2{
+	width: 40%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #a60414;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+fieldset{
+    padding-left: 0;
+    margin-left: 0;
+}
+form label, input, select {
+    margin-left: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 55px;
+
+}
+.footer_desc1, .footer_desc2, .footer_desc3, .footer_desc4{
+  display:inline-block;
+  justify-content: center;
+  padding-left:30px;
+  padding-right: 30px;
+  margin: 10px;
+
+}
+
+.footer_desc1{
+  margin-left: 340px;
+}
+
+h5{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+    </style>
 </head>
 <body>
     <header>
-        <img src="imgs2.jpg" alt="" height="65" width="65" class="logo">
+        <img src="imgs2.png" alt="" height="65" width="65" class="logo">
         <ul class="menu">
             <li><span>About Us</span>
                 <ul>
@@ -40,27 +193,47 @@
             </li>        
         </ul>
     </header>
-    
-    <center>
-        <fieldset class="abbform">
-            <form>
-                <h3 style="text-align: left;">Blood Bank Address</h3>
-                <div class="formbutton">
-                <label>State</label>
-                <input type="text" placeholder="Enter state">
-                <label>District </label>
-                <input type="text" placeholder="Enter district">
-                <label> City</label>
-                <input type="text" placeholder="Enter city">
-                </div>
-                <h3 style="text-align: left;">Blood Bank Details</h3>
-                <div class="formbutton">
+    <div class="f1">
+        <h2 style="margin: 20px; color: #a60414;">Add your Bloodbank</h2>
+    <fieldset class="abbform">
+        <form>
+        <h3>Blood Bank Address</h3>
+        <fieldset class="abbform1">
+
+        <label>State</label>
+        <input type="text" placeholder="Enter state">
+        <label>District </label>
+        <input type="text" placeholder="Enter district">
+        <label> City</label>
+        <input type="text" placeholder="Enter city">
+        
+        </fieldset>
+          <br>
+        <h3>Blood Bank Details</h3>
+        <fieldset class="abbform2">
+            <div class="fcol1">
                 <label>Blood Bank Name</label>
                 <input type="text">
                 <label>Parent Hospital Name</label>
                 <input type="text">
+            </div>
+          <br>
+          <div class="fcol2">
                 <label>Short Name</label>
                 <input type="text">
+                <label>Email</label>
+                <input type="email">
+                <label>License No.</label>
+                <input type="number">
+                <label>Component Facility</label>
+                <select>
+                    <option>Select Value</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+          <br>
+          <div class="fcol3">
                 <label>Category</label>
                 <select><option>Select Type</option>
                 <option>Government</option>
@@ -68,95 +241,101 @@
                 <option>Charitable/Vol</option>
                 <option>Private</option>
                 </select>
-                <label>Contact Person</label>
-                <input type="text">
-                <label>Email</label>
-                <input type="email">
                 <label>Contact No.</label>
                 <input type="tel">
-                <label>Fax No.</label>
-                <input type="number">
-                <label>License No.</label>
-                <input type="number">
                 <label>From Date</label>
                 <input type="date">
-                <label>To Date</label>
-                <input type="date">
-                <label>Component Facility</label>
-                <select>
-                    <option>Select Value</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                </select>
                 <label>Apheresis Facility</label>
                 <select>
                     <option>Select Value</option>
                     <option>Yes</option>
                     <option>No</option>
                 </select>
+            </div>
+          <br>
+            <div class="fcol4">
+                <label>Contact Person</label>
+                <input type="text">
+                <label>Fax No.</label>
+                <input type="number">
+                <label>To Date</label>
+                <input type="date">
                 <label>Helpline No.</label>
                 <input type="tel">
-                </div>
-                <h3 style="text-align: left;">Donor Type</h3>
-                <div class="formbutton">
+            </div>
+            </fieldset>
+            <h3 style="text-align: left;">Donor Type</h3>
+            <div class="abbform3">
+            <fieldset>
+              <div class="checkbox">
                 <label>Voluntary</label> <input type="checkbox" id="" value="voluntary">
                 <label>Replacement</label> <input type="checkbox" id="" value="replacement">
                 <label>Directed</label> <input type="checkbox" id="" value="directed">
                 <label>Autologous</label> <input type="checkbox" id="" value="autologous">
                 <label>Family</label> <input type="checkbox" id="" value="family">
                 <label>Replacement External</label> <input type="checkbox" id="" value="replacementext">
-                </div>
-                <h3 style="text-align: left;">Donation Type</h3>
-                <div class="formbutton">
+              </div>
+            </fieldset>
+            </div>
+            <h3 style="text-align: left;">Donation Type</h3>
+            <fieldset>
+                <div class="checkbox">
                     <label>Leucaperesis</label> <input type="checkbox" id="" value="voluntary">
                     <label>Plasmapheresis</label> <input type="checkbox" id="" value="replacement">
                     <label>Plateletpheresis</label> <input type="checkbox" id="" value="directed">
                 </div>
+                </fieldset>
                 <h3 style="text-align: left;">Component Type</h3>
-                <div class="formbutton">
+                <fieldset>
+                  <div class="checkbox">
                 <label>Cryo Poor Plasma</label> <input type="checkbox" id="" value="voluntary">
                 <label>Cryoprecipitate</label> <input type="checkbox" id="" value="replacement">
                 <label>Fresh Frozen Plasma</label> <input type="checkbox" id="" value="directed">
                 <label>Irradiated Rbc</label> <input type="checkbox" id="" value="autologous">
                 <label>Leukoreduced Rbc</label> <input type="checkbox" id="" value="family">
                 <label>Packed Red Blood Cells</label> <input type="checkbox" id="" value="replacementext">
-                <label>Plasma</label> <input type="checkbox" id="" value="voluntary">
+                <label>Plasma</label> <input type="checkbox" id="" value="voluntary"><br><br>
                 <label>Platelet Concentrate</label> <input type="checkbox" id="" value="replacement">
                 <label>Platelet Poor Plasma</label> <input type="checkbox" id="" value="directed">
                 <label>Platelet Rich Plasma</label> <input type="checkbox" id="" value="autologous">
                 <label>Platelets additive solutions</label> <input type="checkbox" id="" value="family">
-                <label>Random Donor Platelets</label> <input type="checkbox" id="" value="replacementext">
+                <label>Random Donor Platelets</label> <input type="checkbox" id="" value="replacementext"><br><br>
                 <label>Sagm Packed Red Blood Cells</label> <input type="checkbox" id="" value="directed">
                 <label>Single Donor Plasma</label> <input type="checkbox" id="" value="autologous">
                 <label>Single Donor Platelet</label> <input type="checkbox" id="" value="family">
                 <label>Whole Blood</label> <input type="checkbox" id="" value="replacementext">
                 </div>
+                </fieldset>
                 <h3 style="text-align: left;">Bag Type</h3>
-                <div class="formbutton">
+                <fieldset>
+                <div class="cl">
                 <label>Single (350/450ml)</label> <input type="checkbox" id="" value="voluntary">
                 <label>Double (350/450ml)</label> <input type="checkbox" id="" value="replacement">
                 <label>Triple (350/450ml)</label> <input type="checkbox" id="" value="directed">
                 <label>Quadruple (450ml) with inline filter</label> <input type="checkbox" id="" value="autologous">
-                <label>Penta Bag (450 ml)</label> <input type="checkbox" id="" value="family">
+                <label>Penta Bag (450 ml)</label> <input type="checkbox" id="" value="family"><br><br>
                 <label>Transfer Bags</label> <input type="checkbox" id="" value="replacementext">
                 <label>Apheresis Kits</label> <input type="checkbox" id="" value="voluntary">
                 <label>Triple (350 MI) CPD/SAGM</label> <input type="checkbox" id="" value="replacement">
                 <label>Triple (450MI) CPD/SAGM</label> <input type="checkbox" id="" value="directed">
                 </div>
+                </fieldset>
                 <h3 style="text-align: left;">TTI Type</h3>
-                <div class="formbutton">
+                <fieldset>
+                <div class="checkbox">
                 <label>HIV 1&2</label> <input type="checkbox" id="" value="voluntary">
                 <label>Hepatitis-B</label> <input type="checkbox" id="" value="replacement">
                 <label>Hepatitis-C</label> <input type="checkbox" id="" value="directed">
                 <label>Syphilis</label> <input type="checkbox" id="" value="autologous">
                 <label>Malaria</label> <input type="checkbox" id="" value="">
                 </div>
+                </fieldset>
                 <h3 style="text-align: left;">Remarks</h3>
-                <textarea></textarea>
-                <input type="submit">
-            </form>
-        </fieldset>
-    </center>
+                <textarea rows="6" cols="200" name="remark" form="gform"></textarea>
+                <input type="submit" class="button2" value="Submit ">
+  </form>
+    </fieldset>
+    </div>
 
     <footer>
         <div class="footer_desc1">
